@@ -1,4 +1,5 @@
 <%= form_with url: accounts_path, local: true do |f| %>
-  <%= f.text_area :names %>
+  <%= f.text_area :names, rows: 10 %>
+  <p>Add account names separated by newline.</p>
   <%= f.submit 'Export CSV' %>
 <% end %>
