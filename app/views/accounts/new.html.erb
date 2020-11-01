@@ -1,0 +1,4 @@
+<%= form_with url: accounts_path, local: true do |f| %>
+  <%= f.text_area :names %>
+  <%= f.submit 'Export CSV' %>
+<% end %>
