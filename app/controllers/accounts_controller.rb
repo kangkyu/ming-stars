@@ -15,6 +15,9 @@ class AccountsController < ApplicationController
             business_email = body['graphql']['user']['business_email']
             is_business = body['graphql']['user']['is_business_account']
             csv << [account_name, business_email, is_business]
+          elsif res.is_a?(Net::HTTPRedirection)
+            puts res
+            puts res.header['location']
           else
             puts res
             puts res.body
